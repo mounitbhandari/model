@@ -1,0 +1,140 @@
+
+
+<mat-drawer-container class="example-container" autosize style="background-color: #bebebf;">
+    <mat-drawer #drawer  mode="side" opened="false" position="end">
+<!--        <button *ngIf="authService.isAuthenticated()" (click)="logout()" class="logout-button coder-fab"  mat-fab><i class="ri-shut-down-line"></i></button>-->
+<!--        <button *ngIf="authService.isAuthenticated()" [popover]="popoverCustomer"  class="logout-button coder-fab"  mat-fab><i class="ri-shut-down-line"></i></button>-->
+
+        <button *ngIf="authService.isAuthenticated()" [matMenuTriggerFor]="menuShutDown" class="logout-button coder-fab"  mat-fab><i class="ri-shut-down-line"></i></button>
+        <mat-menu #menuShutDown="matMenu" class="custom-menu">
+            <button mat-menu-item (click)="logoutAll()">Logout from All Devices<i class="ri-logout-box-r-fill"></i> </button>
+            <button mat-menu-item (click)="logout()">Logout from here <i class="ri-logout-circle-r-fill"></i> </button>
+        </mat-menu>
+        <a (click)="drawer.toggle()" class="menu-toggle rounded" [routerLink]=""><i class="bi bi-list" ></i></a>
+        <br><br><br>
+        <app-menu></app-menu>
+    </mat-drawer>
+
+    <a (click)="drawer.toggle()" class="menu-toggle rounded" [routerLink]=""><i class="bi bi-list" ></i></a>
+    <router-outlet></router-outlet>
+    <app-top></app-top>
+<!--    testing section, currently not using-->
+    <app-test-section *ngIf="false"></app-test-section>
+    <app-why-us *ngIf="false"></app-why-us>
+    <app-features *ngIf="false"></app-features>
+    <app-popular-courses *ngIf="false"></app-popular-courses>
+    <app-offer-section *ngIf="false"></app-offer-section>
+
+    <!-- Callout-->
+    <app-callout-section *ngIf="false"></app-callout-section>
+    <!-- ======= Trainers Section ======= -->
+    <app-trainer *ngIf="false"></app-trainer>
+    <!-- Portfolio-->
+   
+
+    <section  *ngIf="false" class="content-section bg-primary text-white">
+        <div class="container px-4 px-lg-5 text-center">
+            <h2 class="mb-4">The buttons below are impossible to resist...</h2>
+            <a class="btn btn-xl btn-light me-4" href="#!">Click Me!</a>
+            <a class="btn btn-xl btn-dark" href="#!">Look at Me!</a>
+        </div>
+    </section>
+    <!-- Map-->
+    <div *ngIf="false" class="map" id="contact">
+        <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
+        <br />
+        <small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a></small>
+    </div>
+    <!-- Footer-->
+    <footer *ngIf="false" class="footer text-center">
+        <div class="container px-4 px-lg-5">
+            <ul class="list-inline mb-5">
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-facebook"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white mr-3" href="#!"><i class="icon-social-twitter"></i></a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="social-link rounded-circle text-white" href="#!"><i class="icon-social-github"></i></a>
+                </li>
+            </ul>
+            <p class="text-muted small mb-0">Copyright &copy; Your Website 2021</p>
+        </div>
+    </footer>
+    <footer  *ngIf="false" id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Mentor</h3>
+                        <p>
+                            25(10/A)<br>
+                            Shibtala, Nonachandanpukur<br>
+                            Barackpore<br><br>
+                            <strong>Phone:</strong> +91 70037 56860<br>
+                            <strong>Email:</strong> sukantahui@gmail.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 footer-newsletter">
+                        <h4>Join Our Newsletter</h4>
+                        <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscribe">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-md-flex py-4">
+
+            <div class="me-md-auto text-center text-md-start">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+            <div class="social-links text-center text-md-right pt-3 pt-md-0">
+                <a href="https://twitter.com/sukantahui" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.facebook.com/sukantahui" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/sukantahui/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus" target="_blank"><i class="bx bxl-skype"></i></a>
+                <a href="https://www.linkedin.com/in/sukanta-hui-56790931/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+</mat-drawer-container>

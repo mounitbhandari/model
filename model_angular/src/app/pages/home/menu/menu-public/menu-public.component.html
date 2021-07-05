@@ -1,0 +1,25 @@
+<div class="menu" id="menu-public">
+    <button *ngIf="authService.isNotAuthenticated()" (click)="showLogin=!showLogin" class="login-button coder-fab"  mat-fab><i class="ri-login-circle-line"></i></button>
+    <app-auth *ngIf="showLogin"></app-auth>
+</div>
+<h4>Owner</h4>
+<div class="basic-container">
+    <div class="menu-bar mat-elevation-z1">
+        <div class="container" fxFill *ngFor="let item of navItems">
+            <!-- Handle branch node buttons here -->
+            <div class="p-1" *ngIf="item.children && item.children.length > 0">
+                <a class="menu-level1" mat-button [matMenuTriggerFor]="menu.childMenu" style="border-radius: 10px; width: 150px;"
+                   [disabled]="item.disabled" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="200">
+                    {{item.displayName}}<i class="bi bi-caret-down-fill"></i>
+                </a>
+                <app-menu-item #menu [items]="item.children" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="200"></app-menu-item>
+            </div>
+            <!-- Leaf node buttons here -->
+            <div  *ngIf="!item.children || item.children.length === 0">
+                <a mat-button color="primary" [routerLink]="item.route" data-aos="fade-right" data-aos-duration="4000" data-aos-delay="200">
+                    {{item.displayName}}
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

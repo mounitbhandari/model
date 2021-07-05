@@ -1,0 +1,88 @@
+
+::ng-deep .custom-menu{
+  margin-top: 15px;
+  background-color: rgba(255, 171, 48, 0.95);
+}
+
+
+.item {
+  width: 200px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}
+
+
+
+
+
+mat-drawer{
+  background-color: #1D809F;
+  border-left: 4px solid #495057;
+  padding: 10px;
+}
+
+.login-button{
+  position: fixed;
+  right: 95px;
+  top: 15px;
+  text-align: center;
+  color: #1200ff;
+  background: rgb(45, 255, 28);
+  line-height: 50px;
+  z-index: 999;
+}
+
+.logout-button{
+  position: fixed;
+  right: 95px;
+  top: 15px;
+  text-align: center;
+  color: #fff;
+  background: rgba(248, 2, 100, 0.5);
+  line-height: 50px;
+  z-index: 999;
+}
+.coder-fab {
+  width: 50px;
+  height: 50px;
+  line-height: 14px;
+  font-size: 14px;
+
+  &::ng-deep .mat-button-wrapper{
+    line-height: 14px;
+    padding: 0;
+
+    .mat-icon {
+      font-size: 12px;
+      padding-right: 4px;
+      padding-top: 4px;
+    }
+  }
+}
+
+.swal2-container {
+  display: flex;
+  position: fixed;
+  z-index: 1060;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: .625em;
+  overflow-x: hidden;
+  transition: background-color .1s;
+  background-color: #0f5132;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mat-menu-content {
+  background-color: red !important;
+}

@@ -1,0 +1,34 @@
+$color-red: rgba(232, 87, 4, 0.82);
+$color-yellow-1: #e89e05;
+$color-yellow-2: #e8c50e;
+$color-yellow-3: #dce815;
+$base-color: #c6538c;
+$color-black-68: #dea110;
+@mixin linear-gradient($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction)==false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+.java-main {
+  min-height: 100vh;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../../../../../assets/img/bg-student.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.java-main h1, .java-main .h1 {
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}

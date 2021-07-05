@@ -1,0 +1,62 @@
+<div id="outer-div" class="ml-2">
+    <div class="card p-3" style="width: 100vw; height: 100vh;">
+        <div class="card-body">
+            <div class="d-flex flex-row bd-highlight mb-3">
+                <div class="p-2 bd-highlight">
+                    <form [formGroup]="bankingForm">
+                        <mat-form-field appearance="legacy">
+                            <mat-label>Legacy form field</mat-label>
+                            <input matInput placeholder="IFSC Code" formControlName="ifsc">
+                            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                            <mat-hint>Enter your IFSC Code</mat-hint>
+                        </mat-form-field>
+                        <button mat-raised-button color="warn" (click)="getBankDetails()">Get Bank Details</button>
+                    </form>
+                </div>
+                <div class="p-2 bd-highlight">
+                    <table class="table table-responsive table-striped" *ngIf="bankDetails">
+                        <tbody>
+                            <tr>
+                                <td class="left-label">IFSC</td> <td>{{bankDetails.IFSC}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left-label">Bank</td> <td>{{bankDetails.BANK}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left-label">Bank Code</td> <td>{{bankDetails.BANKCODE}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left-label">Branch</td> <td>{{bankDetails.BRANCH}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left-label">Address</td> <td>{{bankDetails.ADDRESS}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left-label">City</td> <td>{{bankDetails.CITY}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left-label">District</td> <td>{{bankDetails.DISTRICT}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left-label">State</td> <td>{{bankDetails.STATE}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left-label">MICR</td> <td>{{bankDetails.MICR}}</td>
+                            </tr>
+                            <tr>
+                                <td class="left-label">Contact</td> <td>{{bankDetails.CONTACT}}</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-2 bd-highlight">
+                    <pre>
+                    </pre>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

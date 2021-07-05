@@ -1,0 +1,15 @@
+#transfer-to-agent-div{
+  min-height: 100vh;
+  width: 100vw;
+  padding-left: 35px;
+
+  background: linear-gradient(217deg, rgb(210, 207, 211), rgba(255, 245, 218, 0.5) 70.71%),
+  linear-gradient(127deg, rgba(217, 242, 13, 0.23), rgba(0,255,0,0) 70.71%),
+  linear-gradient(336deg, rgba(211, 208, 122, 0.26), rgba(0,0,255,0) 70.71%);
+}
+.selectedRow{
+  background-color: rgb(232, 201, 28);
+}
+.mat-sort-header-container {
+  align-items: center;
+}
