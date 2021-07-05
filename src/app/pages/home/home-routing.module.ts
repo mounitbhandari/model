@@ -25,28 +25,6 @@ const routes: Routes = [
                                     loadChildren: () => import('./child-pages/banking/banking.module')
                                         .then(mod => mod.BankingModule)
                                },
-                                {
-                                    path: 'SalesManager',
-                                    loadChildren: () => import('./child-pages/sales-manager/sales-manager.module')
-                                        .then(mod => mod.SalesManagerModule)
-                                },
-                                {
-                                    path: 'TransferToAgent',
-                                    loadChildren: () => import('./child-pages/sales-manager/transfer-to-agent/transfer-to-agent.module')
-                                        .then(mod => mod.TransferToAgentModule)
-                                },
-                                {
-                                    path: 'TransferFromAgents',
-                                    loadChildren: () => import('./child-pages/sales-manager/transfer-from-agents/transfer-from-agents.module')
-                                        .then(mod => mod.TransferFromAgentsModule)
-                                },
-                                {
-                                    path: 'StockEntry',
-                                    loadChildren: () => import('./child-pages/sales-manager/stock-entry/stock-entry.module')
-                                        .then(mod => mod.StockEntryModule)
-                                }
-
-
                             ]
                           },
                           // { path: '404', loadChildren: () => import('./home-not-found/home-not-found.module')

@@ -43,25 +43,10 @@ const routes: Routes = [
 
   { path: 'LoadingSpinner', loadChildren: () => import('./shared/loading-spinner/loading-spinner.module').then(m => m.LoadingSpinnerModule) },
 
-  { path: 'Student', loadChildren: () => import('./pages/home/child-pages/student/student.module').then(m => m.StudentModule) },
-
   { path: 'TestSection', loadChildren: () => import('./pages/home/test-section/test-section.module').then(m => m.TestSectionModule) },
-
   { path: 'OfferSection', loadChildren: () => import('./pages/home/offer-section/offer-section.module').then(m => m.OfferSectionModule) },
-
   { path: 'CalloutSection', loadChildren: () => import('./pages/home/callout-section/callout-section.module').then(m => m.CalloutSectionModule) },
-
   { path: 'PortfolioSection', loadChildren: () => import('./pages/home/portfolio-section/portfolio-section.module').then(m => m.PortfolioSectionModule) },
-
-  { path: 'SalesManager', loadChildren: () => import('./pages/home/child-pages/sales-manager/sales-manager.module').then(m => m.SalesManagerModule) },
-
-  { path: 'MenuSalesManager', loadChildren: () => import('./pages/home/menu/menu-sales-manager/menu-sales-manager.module').then(m => m.MenuSalesManagerModule) },
-
-  { path: 'TransferToAgent', loadChildren: () => import('./pages/home/child-pages/sales-manager/transfer-to-agent/transfer-to-agent.module').then(m => m.TransferToAgentModule) },
-
-  { path: 'TransferFromAgents', loadChildren: () => import('./pages/home/child-pages/sales-manager/transfer-from-agents/transfer-from-agents.module').then(m => m.TransferFromAgentsModule) },
-
-  { path: 'stockEntry', loadChildren: () => import('./pages/home/child-pages/sales-manager/stock-entry/stock-entry.module').then(m => m.StockEntryModule) },
 
   // { path: 'auth', loadChildren: () => import('./pages/home/auth/auth.module').then(m => m.AuthModule) },
   // { path: '404', loadChildren: () => import('./pages/not-found/not-found.module').then(m => m.NotFoundModule) },

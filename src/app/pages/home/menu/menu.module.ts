@@ -8,7 +8,7 @@ import {MenuPublicModule} from './menu-public/menu-public.module';
 import {MenuOwnerModule} from './menu-owner/menu-owner.module';
 import {MatIconModule} from '@angular/material/icon';
 import {MenuDeveloperModule} from './menu-developer/menu-developer.module';
-import {MenuSalesManagerModule} from './menu-sales-manager/menu-sales-manager.module';
+
 
 
 
@@ -25,8 +25,7 @@ import {MenuSalesManagerModule} from './menu-sales-manager/menu-sales-manager.mo
         MenuPublicModule,
         MenuOwnerModule,
         MatIconModule,
-        MenuDeveloperModule,
-        MenuSalesManagerModule
+        MenuDeveloperModule
     ]
 })
 export class MenuModule { }
