@@ -1,3 +1,38 @@
+
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  height: 10%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
 .ball {
   position: relative;
   background-color: black;
@@ -8,12 +43,12 @@
 }
 
 .masthead {
-  min-height: 30rem;
-  position: relative;
-  display: table;
+  // min-height: 30rem;
+  // position: relative;
+  // display: table;
   width: 100%;
   height: auto;
-  padding-top: 8rem;
+  // padding-top: 8rem;
   padding-bottom: 8rem;
   //background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../../../../assets/img/gold_background.jpg");
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../../../../assets/img/gold_background.jpg");
@@ -21,6 +56,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  
 }
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
@@ -35,3 +71,7 @@
     font-size: 5.5rem;
   }
 }
+
+
+
+

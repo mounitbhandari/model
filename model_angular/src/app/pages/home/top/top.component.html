@@ -1,28 +1,25 @@
-<header class="masthead d-flex align-items-center">
-
-    <div class="container px-4 px-lg-5 text-center">
-<!--        <h1 class="mb-1" data-aos="fade-down" data-aos-delay="4000"  data-aos-offset="500">-->
-<!--            Welcome to Institution Management System-->
-       <h1 class="mb-1" data-aos="fade-up"
-             data-aos-duration="3000">
-
-            {{projectHeading}}
-            <br>
-            {{contact}}
-        </h1>
-        <h3 class="mb-5"><em>Here root of education is also SWEET</em></h3>
-        <a class="btn btn-primary btn-xl" href="#about">Find Out More</a>
-        <div data-aos="fade-up" data-aos-once="true">
-            the content
-        </div>
-        <div data-aos="fade-down">I am testing all these</div>
-        <div data-aos="fade-up">Fade Up</div>
-        <div data-aos="fade-right">Fade Right</div>
-        <div data-aos="zoom-in-up" data-aos-delay="2000"  data-aos-offset="300">Zoom in up</div>
-        <button (click)="toggleBounce()">Arc the Ball!</button>
-        <div [@animateArc]="arc" class="ball"></div>
-        <a (click)="dynamicDownloadTxt()" >download Txt</a>
-        <a (click)="dynamicDownloadJson()" >download JSON</a>
-        <button (click)="saveFile()">Save File</button>
+<header class="masthead  ">
+    <div class="">
+        
+        <form class="example p-3" action="" style="max-width:200px; ">
+            <h4>Model No.</h4>
+            <!-- <input type="text" placeholder="Search.."  name="search2" > -->
+            <input  placeholder="Search..." [(ngModel)]="modelNo" name="search" type="text" autofocus>
+            <button (click)="searchModel()" type="submit"><i class="bi bi-search"></i></button>
+          </form>
     </div>
+    <div *ngIf="findResult" class="p-3">
+        <div>
+            <p style="text-align: center;"><img src="{{findResult.image_name}}" height="100px" alt=""></p>
+            <p><label><b>Model No.- {{findResult.model_no}}</b></label></p>            
+            <p><label><b>P Loss.- {{findResult.p_loss}}</b> </label></p>
+            <p><label><b>Price- {{findResult.price}}</b> </label></p>
+            <p><label><b>Range- {{findResult.range}}</b> </label></p>       
+             
+            
+            
+        </div>
+        
+    </div>
+    
 </header>

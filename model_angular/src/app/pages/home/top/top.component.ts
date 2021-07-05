@@ -15,8 +15,11 @@ import {HttpClient} from "@angular/common/http";
 export class TopComponent implements OnInit {
   arc = 'false';
   projectDetails: any;
+  models: any[];
   projectHeading: any;
   contact: any;
+  modelNo: any;
+  findResult: any = null;
   private setting = {
     element: {
       dynamicDownload: null as HTMLElement
@@ -30,10 +33,21 @@ export class TopComponent implements OnInit {
       this.contact = this.projectDetails.contact;
 
     });
+    this.http.get('assets/model.json').subscribe((data: any) => {
+      this.models = data;    
+
+    });
+
   }
 
   ngOnInit(): void {
 
+
+  }
+  searchModel(){
+    const index=this.models.findIndex(x=>x.model_no===this.modelNo);
+    this.findResult=this.models[index];
+    console.log(this.findResult.model_no)
   }
   toggleBounce(){
     this.arc = this.arc === 'false' ? 'true' : 'false';
