@@ -1,0 +1,7 @@
+<!--<mat-icon aria-hidden="false" aria-label=" filter icon">filter_alt</mat-icon>-->
+<app-menu-public *ngIf="!authService.isAuthenticated()"></app-menu-public>
+<div *ngIf="authService.isAuthenticated()">
+    <app-menu-owner *ngIf="authService.isOwner()"></app-menu-owner>
+    <app-menu-developer *ngIf="authService.isDeveloper()"></app-menu-developer>
+</div>
+<!--<a [routerLink] (click)="logout()">Logout <i class="icon-login"></i></a>-->
