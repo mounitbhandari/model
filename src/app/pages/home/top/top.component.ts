@@ -20,6 +20,7 @@ export class TopComponent implements OnInit {
   contact: any;
   modelNo: any;
   findResult: any = null;
+  relatedModel: [] = [];
   private setting = {
     element: {
       dynamicDownload: null as HTMLElement
@@ -43,8 +44,11 @@ export class TopComponent implements OnInit {
 
   }
   searchModel(){
+    this.relatedModel = [];
     const index = this.models.findIndex(x => x.model === this.modelNo);
     this.findResult = this.models[index];
+    this.relatedModel =  this.findResult.related_model;
+    console.log(this.relatedModel);
   }
   toggleBounce(){
     this.arc = this.arc === 'false' ? 'true' : 'false';
