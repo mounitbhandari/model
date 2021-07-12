@@ -1,0 +1,37 @@
+[
+    {
+        "model_no": "B7008",
+        "image_name": "assets/images/model/cpanel.jpg",
+        "p_loss": "25",
+        "price": "6000",
+        "range": "31"
+    },
+    {
+        "model_no": "N0107",
+        "image_name": "assets/images/model/curtain.jpg",
+        "p_loss": "25",
+        "price": "6000",
+        "range": "31"
+    },
+    {
+        "model_no": "N0106",
+        "image_name": "assets/images/model/developer.jpg",
+        "p_loss": "25",
+        "price": "6000",
+        "range": "31"
+    },
+    {
+        "model_no": "H1815",
+        "image_name": "assets/images/model/stockist.jpg",
+        "p_loss": "25",
+        "price": "6000",
+        "range": "31"
+    },
+    {
+        "model_no": "N0102",
+        "image_name": "assets/images/model/terminal.jpg",
+        "p_loss": "25",
+        "price": "6000",
+        "range": "31"
+    }
+]

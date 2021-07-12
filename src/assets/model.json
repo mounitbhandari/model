@@ -1,37 +1,287 @@
 [
-    {
-        "model_no": "B7008",
-        "image_name": "assets/images/model/cpanel.jpg",
-        "p_loss": "25",
-        "price": "6000",
-        "range": "31"
-    },
-    {
-        "model_no": "N0107",
-        "image_name": "assets/images/model/curtain.jpg",
-        "p_loss": "25",
-        "price": "6000",
-        "range": "31"
-    },
-    {
-        "model_no": "N0106",
-        "image_name": "assets/images/model/developer.jpg",
-        "p_loss": "25",
-        "price": "6000",
-        "range": "31"
-    },
-    {
-        "model_no": "H1815",
-        "image_name": "assets/images/model/stockist.jpg",
-        "p_loss": "25",
-        "price": "6000",
-        "range": "31"
-    },
-    {
-        "model_no": "N0102",
-        "image_name": "assets/images/model/terminal.jpg",
-        "p_loss": "25",
-        "price": "6000",
-        "range": "31"
-    }
+  {
+    "id": 1,
+    "model": "C0001",
+    "price_code": "G",
+    "weight_range": "1.200 -1.500",
+    "related_model": [
+      "C0054"
+    ],
+    "image_name": "assets/images/model/C0001.jpg"
+  },
+  {
+    "id": 2,
+    "model": "M0281",
+    "price_code": "H",
+    "weight_range": "1.300-1.500",
+    "related_model": [
+      "M0282",
+      "M0286"
+    ],
+    "image_name": "assets/images/model/M0281.jpg"
+  },
+  {
+    "id": 3,
+    "model": "C0336",
+    "price_code": "H",
+    "weight_range": "1.200-1.500",
+    "related_model": [
+      "M0362"
+    ],
+    "image_name": "assets/images/model/C0336.jpg"
+  },
+  {
+    "id": 4,
+    "model": "M0282",
+    "price_code": "B",
+    "weight_range": "1.300-1.501",
+    "related_model": [
+      "C0340",
+      "M0286",
+      "C0341",
+      "M0287",
+      "C0342",
+      "D0288",
+      "C0343"
+    ],
+    "image_name": "assets/images/model/M0282.jpg"
+  },
+  {
+    "id": 5,
+    "model": "C0337",
+    "price_code": "C",
+    "weight_range": "1.200-1.501",
+    "related_model": [
+      "D0292",
+      "D0294"
+    ],
+    "image_name": "assets/images/model/C0337.jpg"
+  },
+  {
+    "id": 6,
+    "model": "M0283",
+    "price_code": "G",
+    "weight_range": "1.300-1.502",
+    "related_model": [
+      "E0350",
+      "E0351"
+    ],
+    "image_name": "assets/images/model/M0283.jpg"
+  },
+  {
+    "id": 7,
+    "model": "C0338",
+    "price_code": "P",
+    "weight_range": "1.200-1.502",
+    "related_model": [],
+    "image_name": "assets/images/model/C0338.jpg"
+  },
+  {
+    "id": 8,
+    "model": "M0284",
+    "price_code": "G",
+    "weight_range": "1.300-1.503",
+    "related_model": [],
+    "image_name": "assets/images/model/M0284.jpg"
+  },
+  {
+    "id": 9,
+    "model": "C0339",
+    "price_code": "B",
+    "weight_range": "1.200-1.503",
+    "related_model": [],
+    "image_name": "assets/images/model/C0339.jpg"
+  },
+  {
+    "id": 10,
+    "model": "M0285",
+    "price_code": "C",
+    "weight_range": "1.300-1.504",
+    "related_model": [],
+    "image_name": "assets/images/model/M0285.jpg"
+  },
+  {
+    "id": 11,
+    "model": "C0340",
+    "price_code": "G",
+    "weight_range": "1.200-1.504",
+    "related_model": [],
+    "image_name": "assets/images/model/C0340.jpg"
+  },
+  {
+    "id": 12,
+    "model": "M0286",
+    "price_code": "P",
+    "weight_range": "1.300-1.505",
+    "related_model": [],
+    "image_name": "assets/images/model/M0286.jpg"
+  },
+  {
+    "id": 13,
+    "model": "C0341",
+    "price_code": "G",
+    "weight_range": "1.200-1.505",
+    "related_model": [],
+    "image_name": "assets/images/model/C0341.jpg"
+  },
+  {
+    "id": 14,
+    "model": "M0287",
+    "price_code": "B",
+    "weight_range": "1.300-1.506",
+    "related_model": [],
+    "image_name": "assets/images/model/M0287.jpg"
+  },
+  {
+    "id": 15,
+    "model": "C0342",
+    "price_code": "C",
+    "weight_range": "1.200-1.506",
+    "related_model": [],
+    "image_name": "assets/images/model/C0342.jpg"
+  },
+  {
+    "id": 16,
+    "model": "D0288",
+    "price_code": "G",
+    "weight_range": "1.300-1.507",
+    "related_model": [],
+    "image_name": "assets/images/model/D0288.jpg"
+  },
+  {
+    "id": 17,
+    "model": "C0343",
+    "price_code": "P",
+    "weight_range": "1.200-1.507",
+    "related_model": [],
+    "image_name": "assets/images/model/C0343.jpg"
+  },
+  {
+    "id": 18,
+    "model": "D0289",
+    "price_code": "G",
+    "weight_range": "1.300-1.508",
+    "related_model": [],
+    "image_name": "assets/images/model/D0289.jpg"
+  },
+  {
+    "id": 19,
+    "model": "C0344",
+    "price_code": "B",
+    "weight_range": "1.200-1.508",
+    "related_model": [],
+    "image_name": "assets/images/model/C0344.jpg"
+  },
+  {
+    "id": 20,
+    "model": "D0290",
+    "price_code": "C",
+    "weight_range": "1.300-1.509",
+    "related_model": [],
+    "image_name": "assets/images/model/D0290.jpg"
+  },
+  {
+    "id": 21,
+    "model": "C0345",
+    "price_code": "G",
+    "weight_range": "1.200-1.509",
+    "related_model": [],
+    "image_name": "assets/images/model/C0345.jpg"
+  },
+  {
+    "id": 22,
+    "model": "D0291",
+    "price_code": "P",
+    "weight_range": "1.300-1.510",
+    "related_model": [],
+    "image_name": "assets/images/model/D0291.jpg"
+  },
+  {
+    "id": 23,
+    "model": "E0346",
+    "price_code": "G",
+    "weight_range": "1.200-1.510",
+    "related_model": [],
+    "image_name": "assets/images/model/E0346.jpg"
+  },
+  {
+    "id": 24,
+    "model": "D0292",
+    "price_code": "B",
+    "weight_range": "1.300-1.511",
+    "related_model": [],
+    "image_name": "assets/images/model/D0292.jpg"
+  },
+  {
+    "id": 25,
+    "model": "E0347",
+    "price_code": "C",
+    "weight_range": "1.200-1.511",
+    "related_model": [],
+    "image_name": "assets/images/model/E0347.jpg"
+  },
+  {
+    "id": 26,
+    "model": "D0293",
+    "price_code": "G",
+    "weight_range": "1.300-1.512",
+    "related_model": [],
+    "image_name": "assets/images/model/D0293.jpg"
+  },
+  {
+    "id": 27,
+    "model": "E0348",
+    "price_code": "P",
+    "weight_range": "1.200-1.512",
+    "related_model": [],
+    "image_name": "assets/images/model/E0348.jpg"
+  },
+  {
+    "id": 28,
+    "model": "D0294",
+    "price_code": "G",
+    "weight_range": "1.300-1.513",
+    "related_model": [],
+    "image_name": "assets/images/model/D0294.jpg"
+  },
+  {
+    "id": 29,
+    "model": "E0349",
+    "price_code": "B",
+    "weight_range": "1.200-1.513",
+    "related_model": [],
+    "image_name": "assets/images/model/E0349.jpg"
+  },
+  {
+    "id": 30,
+    "model": "D0295",
+    "price_code": "C",
+    "weight_range": "1.300-1.514",
+    "related_model": [],
+    "image_name": "assets/images/model/D0295.jpg"
+  },
+  {
+    "id": 31,
+    "model": "E0350",
+    "price_code": "G",
+    "weight_range": "1.200-1.514",
+    "related_model": [],
+    "image_name": "assets/images/model/E0350.jpg"
+  },
+  {
+    "id": 32,
+    "model": "D0296",
+    "price_code": "P",
+    "weight_range": "1.300-1.515",
+    "related_model": [],
+    "image_name": "assets/images/model/D0296.jpg"
+  },
+  {
+    "id": 33,
+    "model": "E0351",
+    "price_code": "G",
+    "weight_range": "1.200-1.515",
+    "related_model": [],
+    "image_name": "assets/images/model/E0351.jpg"
+  }
 ]

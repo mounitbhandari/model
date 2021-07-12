@@ -10,13 +10,13 @@
     </div>
     <div *ngIf="findResult" class="p-3">
         <div>
-            <p ><img id="images" src="{{findResult.image_name}}" height="160px" alt=""></p>
+            <p><img id="images" src="{{findResult.image_name}}" height="200px" width="300px" alt=""></p>
 
             <div id="tag">
-                <p><label><b>Model No.- {{findResult.model_no}}</b></label></p>            
-                <p><label><b>P Loss.- {{findResult.p_loss}}</b> </label></p>
-                <p><label><b>Price- {{findResult.price}}</b> </label></p>
-                <p><label><b>Range- {{findResult.range}}</b> </label></p>       
+                <p><label><b>Model No.- {{findResult.model}}</b></label></p>
+                <p><label><b>Price Code - {{findResult.price_code}}</b> </label></p>
+                <p><label><b>Weight Range - {{findResult.weight_range}}</b> </label></p>
+<!--                <p><label><b>Related - {{findResult.related_model}}</b> </label></p>-->
             </div>
             
              

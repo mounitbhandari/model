@@ -25,7 +25,6 @@ export class TopComponent implements OnInit {
       dynamicDownload: null as HTMLElement
     }
   }
-
   constructor(private http: HttpClient) {
     this.http.get('assets/projectDetails.json').subscribe((data: any) => {
       this.projectDetails = data;
@@ -34,8 +33,7 @@ export class TopComponent implements OnInit {
 
     });
     this.http.get('assets/model.json').subscribe((data: any) => {
-      this.models = data;    
-
+      this.models = data;
     });
 
   }
@@ -45,9 +43,8 @@ export class TopComponent implements OnInit {
 
   }
   searchModel(){
-    const index=this.models.findIndex(x=>x.model_no===this.modelNo);
-    this.findResult=this.models[index];
-    console.log(this.findResult.model_no)
+    const index = this.models.findIndex(x => x.model === this.modelNo);
+    this.findResult = this.models[index];
   }
   toggleBounce(){
     this.arc = this.arc === 'false' ? 'true' : 'false';
