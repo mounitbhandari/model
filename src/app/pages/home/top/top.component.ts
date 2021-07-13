@@ -4,7 +4,7 @@ import {TopAnimation} from './top.animation';
 import {of} from 'rxjs';
 import {saveAs} from 'file-saver';
 import FileSaver from 'file-saver';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-top',
@@ -15,17 +15,18 @@ import {HttpClient} from "@angular/common/http";
 export class TopComponent implements OnInit {
   arc = 'false';
   projectDetails: any;
-  models: any[];
+  models: any[] = [];
   projectHeading: any;
   contact: any;
   modelNo: any;
   findResult: any = null;
+  relatedModel: [] = [];
+  relatedModelData: any[] = [];
   private setting = {
     element: {
       dynamicDownload: null as HTMLElement
     }
-  }
-
+  };
   constructor(private http: HttpClient) {
     this.http.get('assets/projectDetails.json').subscribe((data: any) => {
       this.projectDetails = data;
@@ -34,14 +35,12 @@ export class TopComponent implements OnInit {
 
     });
     this.http.get('assets/model.json').subscribe((data: any) => {
-      this.models = data;    
-
+      this.models = data;
     });
 
   }
 
   ngOnInit(): void {
-
 
   }
   searchModel(){
