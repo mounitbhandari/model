@@ -34,7 +34,10 @@ export class TopComponent implements OnInit {
       this.contact = this.projectDetails.contact;
 
     });
-    this.http.get('assets/model.json').subscribe((data: any) => {
+    // this.http.get('assets/model.json').subscribe((data: any) => {
+    //   this.models = data;
+    // });
+    this.http.get('assets/test_model.json').subscribe((data: any) => {
       this.models = data;
     });
 
@@ -49,6 +52,7 @@ export class TopComponent implements OnInit {
     const index = this.models.findIndex(x => x.model === this.modelNo);
     this.findResult = this.models[index];
     this.relatedModel =  this.findResult.related_model;
+    console.log(this.relatedModel);
     /*------ using Angular ES6 provided method to filter an array---*/
     this.relatedModelData = this.models.filter(ar => this.relatedModel.find(rm => (rm === ar.model)));
     console.log(this.relatedModelData);
@@ -57,8 +61,9 @@ export class TopComponent implements OnInit {
 
     // for (let x = 0; x < this.relatedModel.length ; x++){
     //     const relatedModelIndex = this.models.findIndex(k => k.model === this.relatedModel[x]);
-    //    // this.relatedModelData.push(this.models[relatedModelIndex]);
-    //    // console.log(this.models[relatedModelIndex]);
+    //     console.log(relatedModelIndex);
+    //     this.relatedModelData.push(this.models[relatedModelIndex]);
+    //     console.log(this.relatedModelData);
     // }
   }
   toggleBounce(){

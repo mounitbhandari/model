@@ -1,0 +1,407 @@
+[
+	{
+		"id": "1",
+		"model": "C0001",
+		"Image": "C0001.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200 -1.500",
+		"related_model": [
+			"M0284"
+		]
+	},
+	{
+		"id": "2",
+		"model": "M0281",
+		"Image": "M0281.jpg",
+		"price_code": "H",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.500",
+		"related_model": [
+			"M0282",
+			"M0286"
+		]
+	},
+	{
+		"id": "3",
+		"model": "C0336",
+		"Image": "C0336.jpg",
+		"price_code": "H",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.500",
+		"related_model": [
+			"M0362"
+		]
+	},
+	{
+		"id": "4",
+		"model": "M0282",
+		"Image": "M0282.jpg",
+		"price_code": "B",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.501",
+		"related_model": [
+			"C0340",
+			"M0286",
+			"C0341",
+			"M0287",
+			"C0342",
+			"D0288",
+			"C0343"
+		]
+	},
+	{
+		"id": "5",
+		"model": "C0337",
+		"Image": "C0337.jpg",
+		"price_code": "C",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.501",
+		"related_model": [
+			"D0292",
+			"D0294"
+		]
+	},
+	{
+		"id": "6",
+		"model": "M0283",
+		"Image": "M0283.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.502",
+		"related_model": [
+			"E0350",
+			"E0351"
+		]
+	},
+	{
+		"id": "7",
+		"model": "C0338",
+		"Image": "C0338.jpg",
+		"price_code": "P",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.502",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "8",
+		"model": "M0284",
+		"Image": "M0284.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.503",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "9",
+		"model": "C0339",
+		"Image": "C0339.jpg",
+		"price_code": "B",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.503",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "10",
+		"model": "M0285",
+		"Image": "M0285.jpg",
+		"price_code": "C",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.504",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "11",
+		"model": "C0340",
+		"Image": "C0340.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.504",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "12",
+		"model": "M0286",
+		"Image": "M0286.jpg",
+		"price_code": "P",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.505",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "13",
+		"model": "C0341",
+		"Image": "C0341.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.505",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "14",
+		"model": "M0287",
+		"Image": "M0287.jpg",
+		"price_code": "B",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.506",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "15",
+		"model": "C0342",
+		"Image": "C0342.jpg",
+		"price_code": "C",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.506",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "16",
+		"model": "D0288",
+		"Image": "D0288.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.507",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "17",
+		"model": "C0343",
+		"Image": "C0343.jpg",
+		"price_code": "P",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.507",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "18",
+		"model": "D0289",
+		"Image": "D0289.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.508",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "19",
+		"model": "C0344",
+		"Image": "C0344.jpg",
+		"price_code": "B",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.508",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "20",
+		"model": "D0290",
+		"Image": "D0290.jpg",
+		"price_code": "C",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.509",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "21",
+		"model": "C0345",
+		"Image": "C0345.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.509",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "22",
+		"model": "D0291",
+		"Image": "D0291.jpg",
+		"price_code": "P",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.510",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "23",
+		"model": "E0346",
+		"Image": "E0346.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.510",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "24",
+		"model": "D0292",
+		"Image": "D0292.jpg",
+		"price_code": "B",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.511",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "25",
+		"model": "E0347",
+		"Image": "E0347.jpg",
+		"price_code": "C",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.511",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "26",
+		"model": "D0293",
+		"Image": "D0293.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.512",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "27",
+		"model": "E0348",
+		"Image": "E0348.jpg",
+		"price_code": "P",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.512",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "28",
+		"model": "D0294",
+		"Image": "D0294.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.513",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "29",
+		"model": "E0349",
+		"Image": "E0349.jpg",
+		"price_code": "B",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.513",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "30",
+		"model": "D0295",
+		"Image": "D0295.jpg",
+		"price_code": "C",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.514",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "31",
+		"model": "E0350",
+		"Image": "E0350.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.514",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "32",
+		"model": "D0296",
+		"Image": "D0296.jpg",
+		"price_code": "P",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.300-1.515",
+		"related_model": [
+			""
+		]
+	},
+	{
+		"id": "33",
+		"model": "E0351",
+		"Image": "E0351.jpg",
+		"price_code": "G",
+		"price": "",
+		"ploss": "",
+		"weight_range": "1.200-1.515",
+		"related_model": [
+			""
+		]
+	}
+]
