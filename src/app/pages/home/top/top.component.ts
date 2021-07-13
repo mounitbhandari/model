@@ -45,9 +45,9 @@ export class TopComponent implements OnInit {
 
   }
   searchModel(){
-    const index=this.models.findIndex(x=>x.model_no===this.modelNo);
+    const index=this.models.findIndex(x=>x.model===this.modelNo);
     this.findResult=this.models[index];
-    console.log(this.findResult.model_no)
+    console.log(this.findResult.model)
   }
   toggleBounce(){
     this.arc = this.arc === 'false' ? 'true' : 'false';

@@ -5,18 +5,28 @@
             <h4>Model No.</h4>
             <!-- <input type="text" placeholder="Search.."  name="search2" > -->
             <input id="input" placeholder="Search..." [(ngModel)]="modelNo" name="search" type="text" autofocus>
-            <button id="button" (click)="searchModel()" type="submit"><i class="bi bi-search"></i></button>
+            <div style="padding-top: 5px;"><button id="button" style="padding-bottom: 5px;" (click)="searchModel()" type="submit"><i class="bi bi-search"></i></button></div>
           </form>
     </div>
     <div *ngIf="findResult" class="p-3">
         <div>
-            <p ><img id="images" src="{{findResult.image_name}}" height="160px" alt=""></p>
+            <p ><img id="images"  class="img-fluid" src="assets/images/model/{{findResult.Image}}" height="160px" alt=""></p>
 
             <div id="tag">
-                <p><label><b>Model No.- {{findResult.model_no}}</b></label></p>            
-                <p><label><b>P Loss.- {{findResult.p_loss}}</b> </label></p>
-                <p><label><b>Price- {{findResult.price}}</b> </label></p>
-                <p><label><b>Range- {{findResult.range}}</b> </label></p>       
+                
+                    <label>Model No.- {{findResult.model}}</label><br>
+                    <label>Price Code- {{findResult.price_code}} </label><br>
+                    <!-- <label>Price- {{findResult.price}} </label><br> -->
+                    <!-- <label>ploss- {{findResult.ploss}} </label><br> -->
+                    <label>Range- {{findResult.weight_range}} </label><br>
+                    <label>Related Model- {{findResult.related_model}} </label> <br>
+               
+                          
+                
+                
+                      
+                      
+                     
             </div>
             
              
