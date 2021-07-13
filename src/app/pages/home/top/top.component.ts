@@ -4,7 +4,7 @@ import {TopAnimation} from './top.animation';
 import {of} from 'rxjs';
 import {saveAs} from 'file-saver';
 import FileSaver from 'file-saver';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-top',
@@ -15,17 +15,18 @@ import {HttpClient} from "@angular/common/http";
 export class TopComponent implements OnInit {
   arc = 'false';
   projectDetails: any;
-  models: any[];
+  models: any[] = [];
   projectHeading: any;
   contact: any;
   modelNo: any;
   findResult: any = null;
   relatedModel: [] = [];
+  relatedModelData: any[] = [];
   private setting = {
     element: {
       dynamicDownload: null as HTMLElement
     }
-  }
+  };
   constructor(private http: HttpClient) {
     this.http.get('assets/projectDetails.json').subscribe((data: any) => {
       this.projectDetails = data;
@@ -41,14 +42,23 @@ export class TopComponent implements OnInit {
 
   ngOnInit(): void {
 
-
   }
   searchModel(){
     this.relatedModel = [];
+    this.relatedModelData = [] ;
     const index = this.models.findIndex(x => x.model === this.modelNo);
     this.findResult = this.models[index];
     this.relatedModel =  this.findResult.related_model;
-    console.log(this.relatedModel);
+    /*------ using Angular ES6 provided method to filter an array---*/
+    this.relatedModelData = this.models.filter(ar => this.relatedModel.find(rm => (rm === ar.model)));
+
+    /* --------- using normal method to filter data from a array by using 'FindIndex' , this is also right----*/
+
+    // for (let x = 0; x < this.relatedModel.length ; x++){
+    //     const relatedModelIndex = this.models.findIndex(k => k.model === this.relatedModel[x]);
+    //    // this.relatedModelData.push(this.models[relatedModelIndex]);
+    //    // console.log(this.models[relatedModelIndex]);
+    // }
   }
   toggleBounce(){
     this.arc = this.arc === 'false' ? 'true' : 'false';
