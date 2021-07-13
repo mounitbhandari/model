@@ -51,6 +51,7 @@ export class TopComponent implements OnInit {
     this.relatedModel =  this.findResult.related_model;
     /*------ using Angular ES6 provided method to filter an array---*/
     this.relatedModelData = this.models.filter(ar => this.relatedModel.find(rm => (rm === ar.model)));
+    console.log(this.relatedModelData);
 
     /* --------- using normal method to filter data from a array by using 'FindIndex' , this is also right----*/
 
