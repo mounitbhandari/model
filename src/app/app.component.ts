@@ -48,7 +48,7 @@ export class AppComponent implements OnInit, OnDestroy{
 
   }
   ngOnInit(): void {
-    this.authService.autoLogin();
+    // this.authService.autoLogin();
     this.canonicalService.setCanonicalURL();
     this.pageTitle.setTitle(this.title);
     this.metaService.addTags([
