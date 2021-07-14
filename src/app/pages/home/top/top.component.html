@@ -18,14 +18,8 @@
                 <div [innerHTML]="notFound"></div>
             </ng-template>
         </div>
-        <form class="example pl-5" action="" style="max-width:200px; ">
-            <h4>Model No.</h4>
-            <!-- <input type="text" placeholder="Search.."  name="search2" > -->
-            <input id="input" placeholder="Search..." [(ngModel)]="modelNo" name="search" type="text" autofocus>
-            <div style="padding-top: 5px;"><button id="button" style="padding-bottom: 5px;" (click)="searchModel()" type="submit"><i class="bi bi-search"></i></button></div>
-          </form>
-        <div *ngIf="findResult" class="pl-5">
-            <div>
+        <div *ngIf="findResult">
+            <div class="text-center">
                 <p ><img id="images"  class="img-fluid" src="assets/images/model/{{findResult.Image}}" height="160px" alt=""></p>
 
                 <div id="tag">

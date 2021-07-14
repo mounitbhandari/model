@@ -41,11 +41,7 @@ export class TopComponent implements OnInit {
       this.projectDetails = data;
       this.projectHeading = this.projectDetails.projectHeading;
       this.contact = this.projectDetails.contact;
-
     });
-    // this.http.get('assets/model.json').subscribe((data: any) => {
-    //   this.models = data;
-    // });
     this.http.get('assets/test_model.json').subscribe((data: any) => {
       this.models = data;
     });
@@ -53,31 +49,6 @@ export class TopComponent implements OnInit {
 
   ngOnInit(): void {
 
-  }
-  searchModel(){
-    this.relatedModel = [];
-    this.relatedModelData = [] ;
-    const index = this.models.findIndex(x => x.model === this.modelNo);
-    if (index < 0){
-        alert('This Model does not exist');
-        return;
-    }
-
-    this.findResult = this.models[index];
-    this.relatedModel =  this.findResult.related_model;
-    console.log(this.relatedModel);
-    /*------ using Angular ES6 provided method to filter an array---*/
-    this.relatedModelData = this.models.filter(ar => this.relatedModel.find(rm => (rm === ar.model)));
-    console.log(this.relatedModelData);
-
-    /* --------- using normal method to filter data from a array by using 'FindIndex' , this is also right----*/
-
-    // for (let x = 0; x < this.relatedModel.length ; x++){
-    //     const relatedModelIndex = this.models.findIndex(k => k.model === this.relatedModel[x]);
-    //     console.log(relatedModelIndex);
-    //     this.relatedModelData.push(this.models[relatedModelIndex]);
-    //     console.log(this.relatedModelData);
-    // }
   }
   toggleBounce(){
     this.arc = this.arc === 'false' ? 'true' : 'false';
