@@ -1,4 +1,7 @@
-
+.ng-autocomplete {
+  width: 400px;
+  padding: 10px;
+}
 
 form.example input[type=text] {
   padding: 10px;
@@ -56,7 +59,7 @@ form.example::after {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
 }
 .masthead h1, .masthead .h1 {
   font-size: 4rem;

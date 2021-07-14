@@ -17,8 +17,7 @@ import {Product} from '../../../models/product.model';
   animations: [TopAnimation]
 })
 export class TopComponent implements OnInit {
-  myControl = new FormControl();
-  options$: Observable<Product[]>;
+
 
   keyword = 'model';
 
@@ -50,8 +49,6 @@ export class TopComponent implements OnInit {
     this.http.get('assets/test_model.json').subscribe((data: any) => {
       this.models = data;
     });
-    this.options$ = this.modelService.getUsers();
-    // console.log(this.options$);
   }
 
   ngOnInit(): void {
@@ -131,11 +128,21 @@ export class TopComponent implements OnInit {
   }
 
   selectEvent($event: any) {
-    console.log($event);
+    this.relatedModel = [];
+    this.relatedModelData = [] ;
+    const index = this.models.findIndex(x => x.id === $event.id);
+    if (index < 0){
+      alert('This Model does not exist');
+      return;
+    }
+    this.findResult = this.models[index];
+    this.relatedModel =  this.findResult.related_model;
+    /*------ using Angular ES6 provided method to filter an array---*/
+    this.relatedModelData = this.models.filter(ar => this.relatedModel.find(rm => (rm === ar.model)));
   }
 
   onChangeSearch($event: any) {
-    console.log($event);
+
   }
 
   onFocused($event: any) {
