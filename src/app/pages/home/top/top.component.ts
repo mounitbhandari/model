@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {animate, keyframes, state, style, transition, trigger} from '@angular/animations';
 import {TopAnimation} from './top.animation';
-import {of} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {saveAs} from 'file-saver';
 import FileSaver from 'file-saver';
 import {HttpClient} from '@angular/common/http';
+import {FormControl} from '@angular/forms';
+import {CommonService} from '../../../services/common.service';
+import {ModelService} from '../../../services/model.service';
+import {Product} from '../../../models/product.model';
 
 @Component({
   selector: 'app-top',
@@ -13,21 +17,25 @@ import {HttpClient} from '@angular/common/http';
   animations: [TopAnimation]
 })
 export class TopComponent implements OnInit {
+  myControl = new FormControl();
+  options$: Observable<{CompanyName: string}[]>;
+
+
   arc = 'false';
   projectDetails: any;
-  models: any[] = [];
+  models: Product[] = [];
   projectHeading: any;
   contact: any;
   modelNo: any;
   findResult: any = null;
-  relatedModel: [] = [];
-  relatedModelData: any[] = [];
+  relatedModel: string[] = [];
+  relatedModelData: Product[] = [];
   private setting = {
     element: {
       dynamicDownload: null as HTMLElement
     }
   };
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private modelService: ModelService) {
     this.http.get('assets/projectDetails.json').subscribe((data: any) => {
       this.projectDetails = data;
       this.projectHeading = this.projectDetails.projectHeading;
@@ -40,7 +48,8 @@ export class TopComponent implements OnInit {
     this.http.get('assets/test_model.json').subscribe((data: any) => {
       this.models = data;
     });
-
+    this.options$ = this.modelService.getUsers();
+    // console.log(this.options$);
   }
 
   ngOnInit(): void {
@@ -50,6 +59,11 @@ export class TopComponent implements OnInit {
     this.relatedModel = [];
     this.relatedModelData = [] ;
     const index = this.models.findIndex(x => x.model === this.modelNo);
+    if (index < 0){
+        alert('This Model does not exist');
+        return;
+    }
+
     this.findResult = this.models[index];
     this.relatedModel =  this.findResult.related_model;
     console.log(this.relatedModel);

@@ -1,9 +1,10 @@
 export interface Product {
-    tag: string;
-    model_no?: string;
-    model_size?: string;
-    qty: number;
-    gold: number;
-    labour_charge: number;
-    is_selected: boolean;
+    id: string;
+    model: string;
+    Image: string;
+    price_code: string;
+    price: string;
+    ploss: string;
+    weight_range: string;
+    related_model: string[];
 }

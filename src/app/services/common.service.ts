@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Subject, timer} from 'rxjs';
+import {BehaviorSubject, Observable, of, Subject, timer} from 'rxjs';
 import {ProjectData} from '../models/project-data.model';
-import {HttpClient} from '@angular/common/http';
 import {formatDate} from '@angular/common';
-import {ServerResponse} from '../models/ServerResponse.model';
 import {environment} from '../../environments/environment';
-import {concatMap, tap} from "rxjs/operators";
+
 
 
 @Injectable({
@@ -73,4 +71,7 @@ export class CommonService {
     this.value$.next(this.currentValue);
     console.log(this.currentValue);
   }
+
+
+
 }
