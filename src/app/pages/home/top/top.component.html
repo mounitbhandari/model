@@ -1,7 +1,6 @@
 <header class="masthead  ">
-    <div class="">
-
-        <div class="ng-autocomplete">
+    <div class="m-3" fxLayout="column" fxLayoutAlign="space-around center">
+        <div class="ng-autocomplete pl-5">
             <h4>Model No.</h4>
             <ng-autocomplete
                     [data]="models"
@@ -12,58 +11,55 @@
                     [itemTemplate]="itemTemplate"
                     [notFoundTemplate]="notFoundTemplate">
             </ng-autocomplete>
-
             <ng-template #itemTemplate let-item>
                 <a [innerHTML]="item.model"></a>
             </ng-template>
-
             <ng-template #notFoundTemplate let-notFound>
                 <div [innerHTML]="notFound"></div>
             </ng-template>
         </div>
-
-        <form class="example p-3" action="" style="max-width:200px; ">
+        <form class="example pl-5" action="" style="max-width:200px; ">
             <h4>Model No.</h4>
             <!-- <input type="text" placeholder="Search.."  name="search2" > -->
             <input id="input" placeholder="Search..." [(ngModel)]="modelNo" name="search" type="text" autofocus>
             <div style="padding-top: 5px;"><button id="button" style="padding-bottom: 5px;" (click)="searchModel()" type="submit"><i class="bi bi-search"></i></button></div>
           </form>
-    </div>
-    <div *ngIf="findResult" class="p-3">
-        <div>
-            <p ><img id="images"  class="img-fluid" src="assets/images/model/{{findResult.Image}}" height="160px" alt=""></p>
+        <div *ngIf="findResult" class="pl-5">
+            <div>
+                <p ><img id="images"  class="img-fluid" src="assets/images/model/{{findResult.Image}}" height="160px" alt=""></p>
 
-            <div id="tag">
+                <div id="tag">
 
                     <label>Model No.- {{findResult.model}}</label><br>
                     <label>Price Code- {{findResult.price_code}} </label><br>
                     <!-- <label>Price- {{findResult.price}} </label><br> -->
                     <!-- <label>ploss- {{findResult.ploss}} </label><br> -->
                     <label>Range- {{findResult.weight_range}} </label><br>
-<!--                   <label>Related Model- {{findResult.related_model}} </label> <br>-->
-                   <!-- <pre>{{relatedModelData | json}}</pre> -->
+                    <!--                   <label>Related Model- {{findResult.related_model}} </label> <br>-->
+                    <!-- <pre>{{relatedModelData | json}}</pre> -->
+                </div>
             </div>
-        </div>
-        <div *ngIf="relatedModelData.length>0">
-            <h4 style="text-align: center">Related Models</h4>
-            <table  class="table table-bordered">
-                <thead>
+            <div *ngIf="relatedModelData.length>0">
+                <h4 style="text-align: center">Related Models</h4>
+                <table  class="table table-bordered">
+                    <thead>
                     <tr>
                         <th>Model No.</th>
                         <th>Price Code</th>
                         <th>Weight Range</th>
                         <th>Image</th>
                     </tr>
-                </thead>
-                <tbody>
+                    </thead>
+                    <tbody>
                     <tr *ngFor="let item of relatedModelData">
                         <td>{{item.model}}</td>
                         <td>{{item.price_code}}</td>
                         <td>{{item.weight_range}}</td>
                         <td><img src="assets/images/model/{{item.Image}}" height="90px" width="90px"></td>
                     </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
