@@ -18,7 +18,7 @@ import {Product} from '../../../models/product.model';
 })
 export class TopComponent implements OnInit {
   myControl = new FormControl();
-  options$: Observable<{CompanyName: string}[]>;
+  options$: Observable<Product[]>;
 
 
   arc = 'false';

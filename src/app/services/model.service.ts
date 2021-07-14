@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {Observable, of} from 'rxjs';
 import {delay} from 'rxjs/operators';
 import {HttpClient} from '@angular/common/http';
+import {Product} from '../models/product.model';
 
 
 @Injectable({
@@ -16,19 +17,8 @@ export class ModelService {
       this.models = data;
     });
   }
-  getUsers(): Observable<{CompanyName: string}[]> {
-    this.http.get('assets/test_model.json').subscribe((data: any) => {
-      this.models = data;
-    });
-    // Simulating an API
-    return of([
-      {CompanyName: 'Angular'},
-      {CompanyName: 'React'},
-      {CompanyName: 'Vue'},
-      {CompanyName: 'Backbone'},
-      {CompanyName: 'Knockout'},
-    ]).pipe(delay(5000));
-    // .pipe(delay(5000)
-
+  getUsers(): Observable<Product[]> {
+    return this.http.get<Product[]>('assets/test_model.json');
+      // return of(this.models).pipe(delay(5000));
   }
 }
