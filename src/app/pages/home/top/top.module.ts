@@ -14,6 +14,7 @@ import { NgSelectModule } from '@ng-select/ng-select';
 import { FlexModule } from '@angular/flex-layout';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {AutocompleteLibModule} from "angular-ng-autocomplete";
 
 
 
@@ -39,6 +40,7 @@ import {MatAutocompleteModule} from '@angular/material/autocomplete';
         FormsModule,
         Ng2SearchPipeModule,
         MatAutocompleteModule,
+        AutocompleteLibModule,
     ]
 })
 export class TopModule { }

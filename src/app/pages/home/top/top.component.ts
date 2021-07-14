@@ -20,6 +20,8 @@ export class TopComponent implements OnInit {
   myControl = new FormControl();
   options$: Observable<Product[]>;
 
+  keyword = 'model';
+
 
   arc = 'false';
   projectDetails: any;
@@ -126,5 +128,17 @@ export class TopComponent implements OnInit {
   saveFile() {
     const blob = new Blob(['Hello, world!'], {type: 'text/plain;charset=utf-8'});
     FileSaver.saveAs(blob, 'hello world.txt');
+  }
+
+  selectEvent($event: any) {
+    console.log($event);
+  }
+
+  onChangeSearch($event: any) {
+    console.log($event);
+  }
+
+  onFocused($event: any) {
+
   }
 }
