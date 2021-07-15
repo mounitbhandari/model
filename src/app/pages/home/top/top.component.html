@@ -20,14 +20,11 @@
         </div>
         <div *ngIf="findResult">
             <div class="text-center">
-                <p ><img id="images"  class="img-fluid" src="assets/images/model/{{findResult.Image}}" height="160px" alt=""></p>
+                <img id="images"  class="img-fluid mb-3" src="assets/images/model/{{findResult.Image}}"  alt="">
 
-                <div id="tag">
-
-                    <label>Model No.- {{findResult.model}}</label><br>
-                    <label>Price Code- {{findResult.price_code}} </label><br>
+                <div id="tag" style="width:300px; margin:0 auto;">
+                    <label>Model  {{findResult.model}} - {{findResult.price_code}}</label><br>
                     <!-- <label>Price- {{findResult.price}} </label><br> -->
-                    <!-- <label>ploss- {{findResult.ploss}} </label><br> -->
                     <label>Range- {{findResult.weight_range}} </label><br>
                     <!--                   <label>Related Model- {{findResult.related_model}} </label> <br>-->
                     <!-- <pre>{{relatedModelData | json}}</pre> -->
