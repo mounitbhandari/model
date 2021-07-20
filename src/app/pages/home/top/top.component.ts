@@ -108,8 +108,14 @@ export class TopComponent implements OnInit {
     }
     this.findResult = this.models[index];
     this.relatedModel =  this.findResult.related_model;
+    console.log(this.relatedModel);
+    console.log(this.findResult);
     /*------ using Angular ES6 provided method to filter an array---*/
     this.relatedModelData = this.models.filter(ar => this.relatedModel.find(rm => (rm === ar.model)));
+  }
+  setDefaultImage(item:any){
+    console.log(item);
+    item.image_url_base= "assets/images/model/noImage.jpg";
   }
 
   onChangeSearch($event: any) {
