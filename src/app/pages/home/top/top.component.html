@@ -20,7 +20,7 @@
         </div>
         <div *ngIf="findResult">
             <div class="text-center">
-                <img id="images"  class="img-fluid mb-3" src="assets/images/model/{{findResult.Image}}"  alt="">
+                <img id="images"  class="img-fluid mb-3" src="{{findResult.image_url_base}}"  alt="">
 
                 <div id="tag" style="width:300px; margin:0 auto;">
                     <label>Model:- <strong> {{findResult.model}} - {{findResult.price_code}} </strong> </label><br>
@@ -46,7 +46,7 @@
                         <td>{{item.model}}</td>
                         <td>{{item.price_code}}</td>
                         <td>{{item.weight_range}}</td>
-                        <td><img src="assets/images/model/{{item.Image}}" height="90px" width="90px"></td>
+                        <td><img src="{{findResult.image_url_base}}" height="90px" width="90px"></td>
                     </tr>
                     </tbody>
                 </table>

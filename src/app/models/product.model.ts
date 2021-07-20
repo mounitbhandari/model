@@ -7,4 +7,5 @@ export interface Product {
     ploss?: string;
     weight_range?: string;
     related_model?: string[];
+    image_url_base: string;
 }

@@ -42,7 +42,7 @@ export class TopComponent implements OnInit {
       this.projectHeading = this.projectDetails.projectHeading;
       this.contact = this.projectDetails.contact;
     });
-    this.http.get('assets/test_model.json').subscribe((data: any) => {
+    this.http.get('assets/model.json').subscribe((data: any) => {
       this.models = data;
     });
   }
