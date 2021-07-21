@@ -113,9 +113,8 @@ export class TopComponent implements OnInit {
     /*------ using Angular ES6 provided method to filter an array---*/
     this.relatedModelData = this.models.filter(ar => this.relatedModel.find(rm => (rm === ar.model)));
   }
-  setDefaultImage(item:any){
-    console.log(item);
-    item.image_url_base= "assets/images/model/noImage.jpg";
+  setDefaultImage(item: Product){
+    item.image_url_base = 'assets/images/model/noImage.jpg';
   }
 
   onChangeSearch($event: any) {
