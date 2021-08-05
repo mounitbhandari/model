@@ -115,6 +115,7 @@ export class TopComponent implements OnInit {
   }
   setDefaultImage(item: Product){
     item.image_url_base = 'assets/images/model/noImage.jpg';
+    
   }
 
   onChangeSearch($event: any) {
