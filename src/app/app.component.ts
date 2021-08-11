@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {Component, HostListener, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { faBaby } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,6 +10,7 @@ import {CanonicalService} from './services/canonical.service';
 import {CommonService} from './services/common.service';
 import {AuthService} from './services/auth.service';
 import * as AOS from 'aos';
+import {ViewportScroller} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,16 @@ export class AppComponent implements OnInit, OnDestroy{
   deviceXs: boolean;
 
   direction = 'row';
-
+  scrollOffset = 70;
+  pageYoffset = 0;
+  navFixed = false;
+  @HostListener('window:scroll', ['$event']) onScroll(event){
+    this.pageYoffset = window.pageYOffset;
+    console.log(this.pageYoffset);
+  }
+  onWindowScroll() {
+    this.navFixed = (window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0) > this.scrollOffset;
+  }
   toggleDirection() {
     const next = (DIRECTIONS.indexOf(this.direction) + 1 ) % DIRECTIONS.length;
     this.direction = DIRECTIONS[next];
@@ -42,7 +52,7 @@ export class AppComponent implements OnInit, OnDestroy{
               // tslint:disable-next-line:align
               , private commonService: CommonService
               // tslint:disable-next-line:align
-              , private authService: AuthService)
+              , private authService: AuthService, private scroll: ViewportScroller)
   {
     AOS.init();
 
@@ -72,6 +82,12 @@ export class AppComponent implements OnInit, OnDestroy{
   ngOnDestroy(): void {
     this.mediaSub.unsubscribe();
   }
+  scrollToTop() {
+    setTimeout(() => {
+      this.scroll.scrollToPosition([0, 0]);
+    }, 300);
+  }
 }
 
+// @ts-ignore
 const DIRECTIONS = ['row', 'row-reverse', 'column', 'column-reverse'];

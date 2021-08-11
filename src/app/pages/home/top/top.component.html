@@ -61,7 +61,7 @@
                 <div>
                     <div class="col-10 p-2" *ngFor="let item of models; let indexOfElement=index">
                         <!-- <h4>{{indexOfElement+1}}</h4> -->
-                        <div style="border: 1px solid black; text-align: center; padding-top: 10px;">
+                        <div style="text-align: center; padding-top: 10px;">
                             <img [src]="item.image_url_base" (error)="setDefaultImage(item)" class="img-fluid"  alt=""><br>
 <!--                            #{{indexOfElement+1}}  -  <strong>{{item.model}}</strong>-->
                             <div class="model-details" style="width:300px; margin:0 auto;">
