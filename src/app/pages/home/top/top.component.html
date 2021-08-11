@@ -54,7 +54,7 @@
             </div>
         </div>
         <div>
-            <h3>Gallery</h3>            
+            <h3>Model Gallery</h3>
             <div  class="container">
 
                 <!-- <div class="d-flex" id="gallery"> -->
@@ -63,7 +63,14 @@
                         <!-- <h4>{{indexOfElement+1}}</h4> -->
                         <div style="border: 1px solid black; text-align: center; padding-top: 10px;">
                             <img [src]="item.image_url_base" (error)="setDefaultImage(item)" class="img-fluid"  alt=""><br>
-                            {{item.model}}
+<!--                            #{{indexOfElement+1}}  -  <strong>{{item.model}}</strong>-->
+                            <div class="model-details" style="width:300px; margin:0 auto;">
+                                <label>Model:- <strong> {{item.model}} - {{item.price_code}} </strong> </label><br>
+                                <!-- <label>Price- {{findResult.price}} </label><br> -->
+                                <label>Range:- <strong>{{item.weight_range}} gm.</strong> </label><br>
+                                <!--                   <label>Related Model- {{findResult.related_model}} </label> <br>-->
+                                <!-- <pre>{{relatedModelData | json}}</pre> -->
+                            </div>
                         </div>
                         
                     </div>
